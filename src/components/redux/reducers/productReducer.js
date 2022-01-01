@@ -1,6 +1,4 @@
 import { ActionTypes } from "../constants/actionTypes";
-console.log(ActionTypes)
-
 
 const initialState = {
     products:[]

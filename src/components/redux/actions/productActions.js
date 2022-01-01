@@ -1,5 +1,4 @@
 import  { ActionTypes } from '../constants/actionTypes'
-console.log(ActionTypes)
 
 
 export const setProducts = (products) =>{
