@@ -1,13 +1,15 @@
 import axios from "axios";
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setProducts } from "../redux/actions/productActions"; 
+import { useDispatch } from "react-redux";
+import { setProducts } from "../redux/actions/productActions";
 import ProductComponent from "./ProductComponent";
 
-console.log(setProducts)
+
 const ProductPage = () => {
-  const products = useSelector((state) => state.allProducts.products);
+
+
   const dispatch = useDispatch();
+  
   const fetchProducts = async () => {
     const response = await axios
       .get("https://fakestoreapi.com/products")
@@ -19,9 +21,10 @@ const ProductPage = () => {
 
   useEffect(() => {
     fetchProducts();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log("Products :", products);
+//   console.log("Products :", products);
   return (
     <div className="ui grid container">
       <ProductComponent />
