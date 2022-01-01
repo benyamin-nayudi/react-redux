@@ -14,8 +14,11 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<ProductListing />} />
                     <Route path="/product/:productId" element={<ProductDetails />} />
+                    <Route > 404 page not fount</Route>
                 </Routes>
             </Router>
+
+
         </div>
      );
 }
